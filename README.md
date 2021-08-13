@@ -1,25 +1,8 @@
-# freebox-monitoring
+# Freebox-Revolution-Monitoring
+Freebox Revolution monitoring using telegraf/influxdb/grafana dockers on Synology NAS
+Using API V8 for maximum compatibility with Freebox OS boxes
+** Si vous venez d'une version précédente, il est grandement conseillé de créer une nouvelle base influxdb
+** Par ailleurs, le polling telegraf est toujurs laissé à 10sec, mais le timeout est positionné à 8sec. car 5sec. provoque de temps en temps des timeout de requetes.
 
-![](https://raw.githubusercontent.com/tuxtof/freebox-monitoring/master/screenshot.png)
-
-Test done on Freebox Delta S,
-
-### Quickly launch with Docker
-
-Just run
-
-```
-$ docker-compose up
-```
-
-Go To http:// your docker host ip:3000/dashboard/file/freebox-grafana.json, wait 1 minute, and you should see your data :).
-
-### Dependency:
-- telegraf
-- influxdb
-- grafana
-
-### List of important files for manual install:
-- fbx-info.py : script for retrieve freebox info to put in /etc/telegraf/
-- freebox-grafana.json : freebox dashboard sample to import in grafana
-- freebox.conf: telegraf sample conf to put in /etc/telegraf/telegraf.d/
+Vous trouverez le script Python (freebox_061.py), des screenshot des évolutions avec les requêtes grafana correspondantes.
+Enfin, un fichier API V8.pdf donnant l'ensemble des paramètres accessibles en fonction des arguments passés au script.
