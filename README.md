@@ -2,7 +2,7 @@
 
 ![](https://raw.githubusercontent.com/tuxtof/freebox-monitoring/master/screenshot.png)
 
-Test done on Freebox v5/crystal, not working with freebox revolution for now
+Test done on Freebox Delta S,
 
 ### Quickly launch with Docker
 
@@ -12,7 +12,7 @@ Just run
 $ docker-compose up
 ```
 
-Go To http://localhost:3000/dashboard/file/freebox-grafana.json, wait 1 minute, and you should see your data :).
+Go To http://<your docker host ip>:3000/dashboard/file/freebox-grafana.json, wait 1 minute, and you should see your data :).
 
 ### Dependency:
 - telegraf
